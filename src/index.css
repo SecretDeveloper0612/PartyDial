@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-party-pink: #FF2D8D;
+  --color-party-purple: #7B3CFF;
+  --color-party-blue: #00BFFF;
+  --color-party-dark: #0F172A;
+  --color-party-light: #F8FAFC;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-party-pink via-party-purple to-party-blue;
+  }
+  .bg-gradient-party {
+    @apply bg-gradient-to-r from-party-pink via-party-purple to-party-blue;
+  }
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+  .glass-dark {
+    @apply bg-party-dark/80 backdrop-blur-md border border-white/10 shadow-2xl;
+  }
+}
